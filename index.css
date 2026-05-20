@@ -1,0 +1,33 @@
+:root{
+  --green-700:#0b8a3e;
+  --green-500:#24a148;
+  --green-300:#8bd69a;
+  --muted:#6c757d;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#222;
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.site-header{background:#fff}
+.navbar-brand .brand-name{font-weight:700; font-size:1.05rem; color:var(--green-700)}
+.navbar-brand .brand-slogan{font-size:.78rem; color:var(--muted); line-height:1}
+.hero .display-6{color:var(--green-700)}
+.hero-logo{opacity:.95}
+.section-title{font-size:1.25rem; font-weight:600; margin-bottom:1rem; color:var(--green-700)}
+.cardapio .card{border-radius:.6rem}
+.cardapio .card-title{font-weight:600}
+.btn-success{background:var(--green-500); border-color:var(--green-500)}
+.btn-success:hover{background:var(--green-700); border-color:var(--green-700)}
+.btn-outline-success{color:var(--green-700); border-color:var(--green-300)}
+.btn-outline-success:hover{background:rgba(36,161,72,.06)}
+.site-footer{font-size:.9rem}
+
+@media (max-width:767px){
+  .brand-text{display:none}
+  .hero{text-align:center}
+}

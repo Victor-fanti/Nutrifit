@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NutriFit - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
+  <style>
+    body { display:flex; align-items:center; justify-content:center; min-height:100vh; background:linear-gradient(135deg, #0b8a3e 0%, #24a148 100%); font-family:'Montserrat',sans-serif; }
+    .login-container { width:100%; max-width:420px; background:#fff; border-radius:1.5rem; box-shadow:0 20px 60px rgba(0,0,0,0.3); padding:3rem 2rem; }
+    .login-header { text-align:center; margin-bottom:2rem; }
+    .login-header h1 { font-size:2rem; font-weight:700; color:#0b8a3e; margin-bottom:.5rem; }
+    .login-header p { color:#6c757d; font-size:.95rem; }
+    .form-control { border-radius:.6rem; border:1px solid #e9ecef; padding:.75rem 1rem; font-size:.95rem; transition:all .3s ease; }
+    .form-control:focus { border-color:#0b8a3e; box-shadow:0 0 0 3px rgba(11,138,62,0.1); }
+    .btn-login { background:linear-gradient(135deg, #0b8a3e 0%, #24a148 100%); border:none; padding:.75rem 1.5rem; font-weight:600; border-radius:.6rem; transition:all .3s ease; }
+    .btn-login:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(11,138,62,0.3); }
+    .login-error { color:#dc3545; font-size:.9rem; margin-top:.5rem; display:none; }
+    .login-demo { text-align:center; margin-top:2rem; padding-top:2rem; border-top:1px solid #e9ecef; }
+    .login-demo p { color:#6c757d; font-size:.85rem; margin-bottom:.5rem; }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <h1>NutriFit</h1>
+      <p>Painel do Nutricionista</p>
+    </div>
+
+    <form id="loginForm">
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" placeholder="nutricionista@nutrifit.com.br" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Senha</label>
+        <input type="password" name="password" class="form-control" placeholder="Senha" required>
+      </div>
+      <div class="login-error" id="loginError"></div>
+      <button type="submit" class="btn btn-login w-100 text-white">Entrar</button>
+    </form>
+
+    <div class="login-demo">
+      <p><strong>Demo (use para testar):</strong></p>
+      <small>
+        Email: <code>nutricionista@nutrifit.com.br</code><br>
+        Senha: <code>senha123</code>
+      </small>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

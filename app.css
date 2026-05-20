@@ -1,0 +1,17 @@
+body{font-family:Montserrat,system-ui,Arial,Helvetica,sans-serif; background:#f4f7f6; color:#212529;}
+.navbar{box-shadow:0 4px 14px rgba(0,0,0,.08);}
+main{padding-bottom:2rem;}
+.card{border-radius:1rem;}
+#clientsList .client-item{padding:1rem; border-bottom:1px solid #e9ecef; display:flex; justify-content:space-between; align-items:center; transition:background .2s ease;}
+#clientsList .client-item:hover{background:#f8fff4;}
+#clientsList .client-item strong{font-size:1rem;}
+#clientsList .meta{font-size:.82rem; color:#6c757d; margin-top:.25rem;}
+#clientDetail .detail-section{margin-top:1.25rem;}
+#clientDetail .chat-box{min-height:240px; background:#fff; overflow:auto;}
+#clientDetail .chat-message{margin-bottom:.75rem;}
+#clientDetail .chat-message .sender{font-weight:600;}
+#clientDetail .chat-message .timestamp{font-size:.78rem; color:#6c757d;}
+#clientDetail .border{border-color:#e9ecef!important;}
+@media(max-width:991px){
+  #clientsList .client-item{flex-direction:column; align-items:flex-start; gap:.75rem;}
+}
