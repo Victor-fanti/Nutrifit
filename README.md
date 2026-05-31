@@ -2,6 +2,29 @@
 
 Sistema completo para nutricionistas com cadastro de clientes, metas, chat por cliente, calculadora nutricional e exportação de dados.
 
+## Como usar
+
+1. Abra um terminal no diretório `exercicio5`.
+2. Instale as dependências:
+
+```powershell
+npm install
+```
+
+3. Inicie o servidor:
+
+```powershell
+npm start
+```
+
+4. Abra o arquivo `app.html` no navegador ou sirva a pasta com um servidor estático:
+
+```powershell
+npx http-server .
+```
+
+5. Acesse `http://localhost:8080/app.html` ou o caminho local do arquivo.
+
 ## Recursos implementados
 
 - CRUD de clientes
@@ -31,3 +54,4 @@ Sistema completo para nutricionistas com cadastro de clientes, metas, chat por c
 
 - Não há autenticação por enquanto.
 - O banco de dados SQLite será criado automaticamente em `server/nutrifit.db`.
+- Para usar a exportação CSV, abra o painel e clique em `Exportar CSV`.

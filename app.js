@@ -5,6 +5,35 @@ let editMode = false;
 let weightChart = null;
 let analyticsChart = null;
 
+// ===== TEMA (DARK MODE) =====
+function initTheme() {
+  const savedTheme = localStorage.getItem('nutrifit_theme') || 'light';
+  setTheme(savedTheme);
+}
+
+function setTheme(theme) {
+  localStorage.setItem('nutrifit_theme', theme);
+  const html = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const icon = toggle?.querySelector('.toggle-circle i');
+  
+  if (theme === 'dark') {
+    html.setAttribute('data-theme', 'dark');
+    toggle?.classList.add('dark');
+    if (icon) icon.className = 'fas fa-moon';
+  } else {
+    html.removeAttribute('data-theme');
+    toggle?.classList.remove('dark');
+    if (icon) icon.className = 'fas fa-sun';
+  }
+}
+
+document.getElementById('themeToggle')?.addEventListener('click', function() {
+  const currentTheme = localStorage.getItem('nutrifit_theme') || 'light';
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+});
+
 // ===== Verificação de sessão =====
 function checkSession() {
   const session = localStorage.getItem('nutrifit_session');
@@ -312,5 +341,9 @@ document.getElementById('exportCsv').addEventListener('click', function () {
   window.location = 'http://localhost:3000/api/export/clients';
 });
 
+// Inicializar tema
+initTheme();
+
+// Carregar clientes
 loadClients();
 
